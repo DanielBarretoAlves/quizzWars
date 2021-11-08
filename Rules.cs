@@ -1,0 +1,8 @@
+namespace Game
+{
+    class Rules
+    {
+        
+    }
+    
+}
