@@ -39,6 +39,47 @@ namespace Game
 
             return number;
         }
+
+
+        public void hardQuestion()
+        {
+            Console.WriteLine("O que significa 'Schlafzimmer'em Alemão");
+            Console.WriteLine("1 - Quarto");
+            Console.WriteLine("2 - Banheiro");
+            Console.WriteLine("3 - Cozinha");
+            int answer= int.Parse(Console.ReadLine());
+            switch (answer)
+            {
+                case 1:
+                Console.WriteLine("Correto");
+                break;
+                case 2:
+                Console.WriteLine("Errado!");
+                break;
+                
+                default:
+                Console.WriteLine("Errado!");
+                break;
+            }
+
+        }
+
+        public void easyQuestion()
+        {
+            
+        }
+
+        public void mediumQuestion()
+        {
+            
+        }
+
+
+
+
+
+
+
     }
 
 }

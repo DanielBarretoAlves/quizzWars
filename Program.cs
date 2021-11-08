@@ -7,12 +7,14 @@ namespace Game
     public class Program
     {
 
-        public static string createName(){
+        public static string createName()
+        {
             Console.WriteLine("Digite Seu Nome");
             return Console.ReadLine();
         }
 
-        public static int creatTableSize(){
+        public static int creatTableSize()
+        {
             Console.WriteLine("Informe o tamanho do tabuleiro");
             return int.Parse(Console.ReadLine());
         }
@@ -20,6 +22,7 @@ namespace Game
         {
             string name;
             int tableSize;
+            int pontuation = 0;
             Console.WriteLine("************************");
             Console.WriteLine("Bem Vindo");
             Console.WriteLine("************************");
@@ -30,9 +33,25 @@ namespace Game
             Rules game = new Rules();
             while (running != false)
             {
-                 game.showTable(tableSize, pos);
+                game.showTable(tableSize, pos);
+                int mov = game.showMove();
+                pos+= mov;
+                switch (mov)
+                {
+                    case 1:
 
-                 running = false;
+                    break;
+                    case 2:
+
+                    break;
+                    
+                    default:
+                    game.hardQuestion();
+                    break;
+                }
+
+
+                running = false;
             }
         }
     }
