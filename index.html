@@ -17,11 +17,13 @@
     </div>
     <div id="nameSection" class="form">
         <form>
-            <input type="text" class="form-control" id="fname" name="fname" placeholder="Name"><br>
-            <input type="button" style="width: 100%;" class="btn btn-primary" value="Confirmar">
+            <input type="text" class="form-control" id="fname" value ="" name="fname" placeholder="Name"><br>
+            <input type="button"  onclick="setName()" style="width: 100%;" class="btn btn-primary" value="Confirmar">
         </form>
     </div>
     <div class="board" id="board">
+        <p id="showName"></p>
+        <p id="showPlacar"></p>
         <table class="table table-dark table-bordered border-warning">
             <tr>
                 <th id="pos0">Jogador</th>
@@ -38,7 +40,7 @@
         </table>
     </div>
 
-    <div id="quantasCasas" class="d-grid gap-2">
+    <div id="quantasCasas" class="d-grid gap-2" display="none">
         <p>Escolha o Nivel de Dificuldade da Pergunta:</p>
         <button class="btn btn-success" type="button" onclick="testEasy()">Fácil</button>
         <button class="btn btn-warning" type="button">Medio</button>
@@ -52,6 +54,7 @@
             <option id="op1" value="1">One</option>
             <option id="op2" value="2">Two</option>
             <option id="op3" value="3">Three</option>
+            <input type="button"  onclick="responder()" style="width: 100%;" class="btn btn-primary" value="Confirmar">
           </select>
     </div>
 
